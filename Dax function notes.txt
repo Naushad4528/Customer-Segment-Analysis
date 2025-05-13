@@ -1,0 +1,16 @@
+AGE GROUP = SWITCH(TRUE(),CustomerData[Age]<= 20 , "0-20"
+                         ,CustomerData[Age]<=40 && CustomerData[Age]>20 , "20-40",
+                         CustomerData[Age]<=60 && CustomerData[Age]>40 , "40-60",
+                         CustomerData[Age]>60 , "60+")
+
+
+
+
+
+
+
+INCOME GROUP = SWITCH(TRUE(), CustomerData[Income Level] <= 50000 , "20k-50k" ,
+                              CustomerData[Income Level] <=80000 && CustomerData[Income Level] >50000 , "50k-80k",
+                              CustomerData[Income Level] <=110000 && CustomerData[Income Level] >80000 , "80k-110k",
+                              CustomerData[Income Level] <=140000 && CustomerData[Income Level] >110000 , "110k-140k", 
+                               CustomerData[Income Level] >140000 , "140k+")
